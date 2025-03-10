@@ -53,21 +53,21 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      name: "Alex Morgan",
-      role: "Computer Science Student",
-      content: "The clarity of instruction and thoughtful design of the curriculum has transformed how I approach problem-solving. It's refreshing to experience education that values both form and function.",
+      name: "Emma Johnson",
+      role: "High School Student",
+      content: "My grades improved dramatically after just a few sessions with Vector. The personalized approach and flexible scheduling made it easy to fit tutoring into my busy schedule.",
       imageSrc: "",
     },
     {
-      name: "Samantha Lee",
-      role: "Mathematics Major",
-      content: "Vector Tuition has an uncompromising attention to detail. Every concept is presented with such precision and elegance that complex topics become intuitive and approachable.",
+      name: "David Chen",
+      role: "College Freshman",
+      content: "The tutors at Vector helped me prepare for my college entrance exams with strategies I wouldn't have learned elsewhere. Their expertise was invaluable to my success.",
       imageSrc: "",
     },
     {
-      name: "Rahul Patel",
-      role: "Engineering Graduate",
-      content: "I appreciate how the program respects my time and intelligence. The material is dense but accessible, allowing for deeper understanding without unnecessary complexity.",
+      name: "Sophia Rodriguez",
+      role: "Parent",
+      content: "As a parent, I've seen my child's confidence grow tremendously since starting with Vector. The progress tracking tools help me stay involved in their academic journey.",
       imageSrc: "",
     },
   ];
@@ -85,7 +85,7 @@ const Testimonials = () => {
           <div className="chip mb-4">Testimonials</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">What our students say</h2>
           <p className="text-muted-foreground text-lg">
-            The experiences of our students reflect our commitment to excellence and thoughtful education.
+            Don't just take our word for it — hear from the students and parents who've experienced our tutoring services.
           </p>
         </div>
 

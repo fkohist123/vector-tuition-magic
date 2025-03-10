@@ -6,6 +6,8 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
+import About from "@/components/About";
+import Pricing from "@/components/Pricing";
 
 const Index = () => {
   // Smooth scroll implementation
@@ -37,7 +39,9 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <Features />
+        <Pricing />
         <Testimonials />
         <Contact />
       </main>

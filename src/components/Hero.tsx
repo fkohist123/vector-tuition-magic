@@ -34,28 +34,28 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-          <div className="chip mb-6 animate-fade-up">Vector Tuition</div>
+          <div className="chip mb-6 animate-fade-up">Transform Your Learning</div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight text-balance mb-6 animate-fade-up animate-delay-100">
-            Precision learning for the modern student
+            Elevate your education with expert tutoring
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance animate-fade-up animate-delay-200">
-            A premium education experience designed with the same attention to detail that defines the world's most beloved products.
+            Join our community of learners and unlock your full academic potential with personalized instruction and cutting-edge learning tools.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-up animate-delay-300">
             <a 
-              href="#features" 
+              href="#pricing" 
               className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 ease-apple hover:shadow-md hover:scale-105 active:scale-95"
             >
-              Discover More
+              View Plans
             </a>
             <a 
               href="#contact" 
               className="px-8 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all duration-300 ease-apple hover:shadow-sm hover:scale-105 active:scale-95"
             >
-              Get Started
+              Contact Us
             </a>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Hero = () => {
                 {/* Placeholder for future content */}
                 <div className="flex items-center justify-center h-full">
                   <span className="text-muted-foreground text-center max-w-xs">
-                    Visualization content will appear here
+                    Student success visualization
                   </span>
                 </div>
               </div>

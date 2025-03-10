@@ -25,7 +25,9 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -43,7 +45,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-6">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -117,13 +119,13 @@ const Navbar = () => {
             </button>
           </div>
           
-          <div className="flex flex-col items-center justify-center flex-1 space-y-8">
+          <div className="flex flex-col items-center justify-center flex-1 space-y-6">
             {navItems.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-2xl font-medium text-primary/80 hover:text-primary transition-all duration-300 ease-apple transform hover:translate-x-2",
+                  "text-xl font-medium text-primary/80 hover:text-primary transition-all duration-300 ease-apple transform hover:translate-x-2",
                   `animate-fade-up animate-delay-${index * 100}`
                 )}
                 onClick={toggleMobileMenu}
@@ -134,7 +136,7 @@ const Navbar = () => {
             
             <a 
               href="#contact" 
-              className="mt-8 px-8 py-3 rounded-full bg-primary text-primary-foreground text-lg font-medium transition-all duration-300 ease-apple hover:shadow-md animate-fade-up animate-delay-500"
+              className="mt-6 px-8 py-3 rounded-full bg-primary text-primary-foreground text-lg font-medium transition-all duration-300 ease-apple hover:shadow-md animate-fade-up animate-delay-500"
               onClick={toggleMobileMenu}
             >
               Get Started

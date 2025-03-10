@@ -10,11 +10,12 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -30,7 +31,7 @@ const Contact = () => {
         title: "Message sent",
         description: "We'll get back to you as soon as possible.",
       });
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     }, 1500);
   };
 
@@ -44,10 +45,10 @@ const Contact = () => {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <div className="chip mb-4">Get in Touch</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Start your journey today</h2>
+          <div className="chip mb-4">Contact Us</div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your education?</h2>
           <p className="text-muted-foreground text-lg">
-            Have questions or ready to begin? Reach out to us and experience the difference.
+            Have questions or ready to start? Reach out to our team and take the first step toward academic excellence.
           </p>
         </div>
 
@@ -88,6 +89,28 @@ const Contact = () => {
                 />
               </div>
             </div>
+            
+            <div className="space-y-2">
+              <label htmlFor="subject" className="block text-sm font-medium">
+                Subject
+              </label>
+              <select
+                id="subject"
+                name="subject"
+                required
+                value={formData.subject}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all duration-300 ease-apple"
+              >
+                <option value="" disabled>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="pricing">Pricing Information</option>
+                <option value="tutoring">Tutoring Services</option>
+                <option value="technical">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
             <div className="space-y-2">
               <label htmlFor="message" className="block text-sm font-medium">
                 Message

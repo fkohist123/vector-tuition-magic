@@ -41,8 +41,8 @@ const Features = () => {
           <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Optimized Learning",
-      description: "Carefully designed curriculum that respects your time and maximizes knowledge retention."
+      title: "Flexible Scheduling",
+      description: "Book sessions that fit your schedule with 24/7 availability for maximum convenience."
     },
     {
       icon: (
@@ -50,8 +50,8 @@ const Features = () => {
           <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Thoughtful Design",
-      description: "Every aspect of our learning environment is crafted with intention and purpose."
+      title: "Expert Tutors",
+      description: "Learn from qualified educators with years of experience in their specific subject areas."
     },
     {
       icon: (
@@ -59,8 +59,8 @@ const Features = () => {
           <path d="M20 7L12 3L4 7M20 7L12 11M20 7V17L12 21M12 11L4 7M12 11V21M4 7V17L12 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Holistic Approach",
-      description: "We focus on developing both knowledge and practical application in perfect harmony."
+      title: "Personalized Learning",
+      description: "Tailored instruction that adapts to your unique learning style and academic goals."
     },
     {
       icon: (
@@ -68,8 +68,8 @@ const Features = () => {
           <path d="M15 19.1283C16.933 18.4175 18 16.3928 18 14C18 10.6863 15.3137 8 12 8C8.68629 8 6 10.6863 6 14C6 16.3928 7.06701 18.4175 9 19.1283M22 22L2 22M12 2V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Personal Excellence",
-      description: "Develop clarity of thought and the ability to solve complex problems with elegance."
+      title: "Progress Tracking",
+      description: "Monitor your improvement with detailed analytics and performance measurements."
     },
     {
       icon: (
@@ -77,8 +77,8 @@ const Features = () => {
           <path d="M9.5 14.5L5.5 18.5M9.5 14.5H13.5C16.5376 14.5 19 11.5376 19 8.5C19 5.46243 16.5376 2.5 13.5 2.5H9C5.96243 2.5 3.5 5.46243 3.5 8.5C3.5 11.5376 5.96243 14.5 9 14.5H9.5ZM5.5 18.5L3.5 20.5M5.5 18.5L9.5 22.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Seamless Connectivity",
-      description: "Effortlessly connect concepts across subjects for a richer understanding of the world."
+      title: "Interactive Sessions",
+      description: "Engage with dynamic learning materials and collaborative tools for deeper understanding."
     },
     {
       icon: (
@@ -86,8 +86,8 @@ const Features = () => {
           <path d="M15 10L11 14L9 12M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Intuitive Progress",
-      description: "Track your growth with metrics that matter and visualizations that inspire."
+      title: "Guaranteed Results",
+      description: "See measurable improvement in your academic performance or receive additional support at no cost."
     },
   ];
 
@@ -101,10 +101,10 @@ const Features = () => {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <div className="chip mb-4">Our Approach</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Designed with intention, built with precision</h2>
+          <div className="chip mb-4">Our Services</div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Why choose Vector Tuition?</h2>
           <p className="text-muted-foreground text-lg">
-            Every element of our program is thoughtfully crafted to enhance your learning experience.
+            Discover the benefits that set our tutoring services apart and help students excel in their studies.
           </p>
         </div>
 
