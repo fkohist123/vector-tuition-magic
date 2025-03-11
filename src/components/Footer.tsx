@@ -1,3 +1,4 @@
+
 import { NavLink } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
@@ -38,15 +39,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={16} />
-                <span>contact@apextuition.com</span>
+                <span>yousaf@vectortuition.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone size={16} />
-                <span>(123) 456-7890</span>
+                <span>+44 7951 453507</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={16} />
-                <span>1234 Education Ave, Learning City</span>
+                <span>192 Haymill Cl, Ealing, London</span>
               </div>
             </div>
           </div>
