@@ -1,90 +1,107 @@
 
-import { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { ReactNode } from 'react';
 
-const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;
-        const y = (e.clientY - rect.top) / rect.height;
-        setMousePosition({ x, y });
-      }
-    };
+interface HeroProps {
+  title: string;
+  subtitle: string | ReactNode;
+  className?: string;
+  children?: React.ReactNode;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaLink?: string;
+  videoSrc?: string;
+}
 
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  const calculateOffset = (value: number) => {
-    return (value - 0.5) * 20; // -10px to +10px offset
-  };
+const Hero = ({
+  title,
+  subtitle,
+  className,
+  children,
+  showCta = true,
+  ctaText = "Book a Session",
+  ctaLink = "/schedule",
+  videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" // Default placeholder video
+}: HeroProps) => {
+  const navigate = useNavigate();
 
   return (
-    <section 
-      id="home"
-      ref={heroRef}
-      className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden"
-    >
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-          <div className="chip mb-6 animate-fade-up">Transform Your Learning</div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight text-balance mb-6 animate-fade-up animate-delay-100">
-            Elevate your education with expert tutoring
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance animate-fade-up animate-delay-200">
-            Join our community of learners and unlock your full academic potential with personalized instruction and cutting-edge learning tools.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-up animate-delay-300">
-            <a 
-              href="#pricing" 
-              className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 ease-apple hover:shadow-md hover:scale-105 active:scale-95"
-            >
-              View Plans
-            </a>
-            <a 
-              href="#contact" 
-              className="px-8 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all duration-300 ease-apple hover:shadow-sm hover:scale-105 active:scale-95"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-
-        <div className="relative mt-20 lg:mt-32 animate-fade-up animate-delay-400">
-          <div 
-            className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl p-1"
-            style={{
-              transform: `perspective(1000px) rotateX(${calculateOffset(mousePosition.y) * 0.3}deg) rotateY(${calculateOffset(mousePosition.x) * -0.3}deg)`
-            }}
+    <div className={cn("relative overflow-hidden py-24 md:py-32", className)}>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white opacity-50" />
+      
+      <div className="relative content-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-left space-y-6"
           >
-            <div className="glass-panel rounded-xl overflow-hidden aspect-[16/9] flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-background via-secondary/50 to-background">
-                {/* Placeholder for future content */}
-                <div className="flex items-center justify-center h-full">
-                  <span className="text-muted-foreground text-center max-w-xs">
-                    Student success visualization
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Decorative elements */}
-          <div className="absolute -right-12 -top-12 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl animate-pulse-soft"></div>
-          <div className="absolute -left-12 -bottom-12 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl animate-pulse-soft animate-delay-300"></div>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4"
+            >
+              Personalized Tuition Services
+            </motion.span>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="font-semibold tracking-tight"
+            >
+              {title}
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg sm:text-xl text-muted-foreground"
+            >
+              {subtitle}
+            </motion.p>
+            
+            {showCta && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                <Button size="lg" onClick={() => navigate(ctaLink)}>
+                  {ctaText}
+                </Button>
+              </motion.div>
+            )}
+            
+            {children}
+          </motion.div>
+          
+          {/* Right Column - Video */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
+          >
+            <video 
+              className="w-full h-full object-cover" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              src={videoSrc}
+            />
+          </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

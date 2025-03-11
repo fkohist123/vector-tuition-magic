@@ -19,9 +19,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: ['SF Pro Display', 'system-ui', 'sans-serif'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -82,44 +79,33 @@ export default {
 					to: { height: '0' }
 				},
 				'fade-in': {
-					from: { opacity: '0' },
-					to: { opacity: '1' }
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				},
 				'fade-up': {
-					from: { opacity: '0', transform: 'translateY(20px)' },
-					to: { opacity: '1', transform: 'translateY(0)' }
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-in-right': {
-					from: { transform: 'translateX(100%)' },
-					to: { transform: 'translateX(0)' }
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
 				},
 				'slide-in-left': {
-					from: { transform: 'translateX(-100%)' },
-					to: { transform: 'translateX(0)' }
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
-				},
-				'pulse-soft': {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' }
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.7s ease-out',
-				'fade-up': 'fade-up 0.7s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
-				'slide-in-left': 'slide-in-left 0.5s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 4s ease-in-out infinite'
+				'slide-in-left': 'slide-in-left 0.5s ease-out'
 			},
-			transitionTimingFunction: {
-				'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
-                'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
-				'apple': 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Georgia', 'serif']
 			}
 		}
 	},

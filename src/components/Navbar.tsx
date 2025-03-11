@@ -1,148 +1,128 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 10);
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-apple py-4',
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        "fixed w-full top-0 z-50 transition-all duration-300",
+        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="text-xl font-semibold text-primary flex items-center">
-          <span className="ml-2">Vector</span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-primary/80 hover:text-primary transition-colors duration-200 ease-apple"
+      <div className="content-container py-4">
+        <nav className="flex items-center justify-between">
+          <NavLink to="/" className="text-xl font-medium transition-opacity hover:opacity-80 flex items-center gap-2">
+            <ArrowUpRight size={24} className="text-primary" strokeWidth={2.5} />
+            Vector Tuition
+          </NavLink>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => 
+                cn("transition-colors hover:text-primary", 
+                isActive ? "text-primary font-medium" : "text-foreground")
+              }
             >
-              {item.name}
-            </a>
-          ))}
-        </nav>
-
-        <div className="hidden md:block">
-          <a 
-            href="#contact" 
-            className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium transition-all duration-300 ease-apple hover:shadow-md hover:scale-105 active:scale-95"
-          >
-            Get Started
-          </a>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMobileMenu} 
-          className="md:hidden text-primary"
-          aria-label="Toggle menu"
-        >
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            className={cn("transition-all duration-300 ease-apple", mobileMenuOpen ? "opacity-0" : "opacity-100")}
-          >
-            <path 
-              d="M4 6H20M4 12H20M4 18H20" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-            />
-          </svg>
-        </button>
-
-        {/* Mobile Menu */}
-        <div 
-          className={cn(
-            "fixed inset-0 bg-white/95 backdrop-blur-xl z-50 flex flex-col p-10 md:hidden transition-all duration-300 ease-apple",
-            mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex justify-end">
-            <button 
-              onClick={toggleMobileMenu} 
-              className="text-primary"
-              aria-label="Close menu"
+              Home
+            </NavLink>
+            <NavLink 
+              to="/pricing" 
+              className={({ isActive }) => 
+                cn("transition-colors hover:text-primary", 
+                isActive ? "text-primary font-medium" : "text-foreground")
+              }
             >
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  d="M18 6L6 18M6 6L18 18" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                />
-              </svg>
-            </button>
+              Pricing
+            </NavLink>
+            <NavLink 
+              to="/schedule" 
+              className={({ isActive }) => 
+                cn("transition-colors hover:text-primary", 
+                isActive ? "text-primary font-medium" : "text-foreground")
+              }
+            >
+              Schedule
+            </NavLink>
+            
+            <Button asChild size="sm">
+              <NavLink to="/schedule">
+                Book a Session
+              </NavLink>
+            </Button>
           </div>
           
-          <div className="flex flex-col items-center justify-center flex-1 space-y-6">
-            {navItems.map((item, index) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "text-xl font-medium text-primary/80 hover:text-primary transition-all duration-300 ease-apple transform hover:translate-x-2",
-                  `animate-fade-up animate-delay-${index * 100}`
-                )}
-                onClick={toggleMobileMenu}
-              >
-                {item.name}
-              </a>
-            ))}
-            
-            <a 
-              href="#contact" 
-              className="mt-6 px-8 py-3 rounded-full bg-primary text-primary-foreground text-lg font-medium transition-all duration-300 ease-apple hover:shadow-md animate-fade-up animate-delay-500"
-              onClick={toggleMobileMenu}
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
+          <button 
+            className="md:hidden focus:outline-none" 
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
+      </div>
+      
+      <div 
+        className={cn(
+          "fixed inset-0 bg-white z-40 flex flex-col pt-20 pb-6 px-6 md:hidden transition-transform duration-300 ease-in-out",
+          isOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <nav className="flex flex-col space-y-6 text-lg">
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => 
+              cn("py-2 transition-colors hover:text-primary", 
+              isActive ? "text-primary font-medium" : "text-foreground")
+            }
+            onClick={closeMenu}
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/pricing" 
+            className={({ isActive }) => 
+              cn("py-2 transition-colors hover:text-primary", 
+              isActive ? "text-primary font-medium" : "text-foreground")
+            }
+            onClick={closeMenu}
+          >
+            Pricing
+          </NavLink>
+          <NavLink 
+            to="/schedule" 
+            className={({ isActive }) => 
+              cn("py-2 transition-colors hover:text-primary", 
+              isActive ? "text-primary font-medium" : "text-foreground")
+            }
+            onClick={closeMenu}
+          >
+            Schedule
+          </NavLink>
+          
+          <Button className="mt-4 w-full" onClick={closeMenu}>
+            Book a Session
+          </Button>
+        </nav>
       </div>
     </header>
   );
