@@ -115,8 +115,8 @@ const Index = () => {
             className="rounded-xl overflow-hidden shadow-lg"
           >
             <img
-              src="https://media.istockphoto.com/id/1345678276/photo/teenage-boy-with-laptop-having-online-school-class-at-home.jpg?s=612x612&w=0&k=20&c=BA8210GPVx_NWI9HIxukFhQJUrt2rYTBjqxXYT3zx1Q="
-              alt="Student having online tutoring session"
+              src="https://media.istockphoto.com/id/1500285927/photo/young-woman-a-university-student-studying-online.jpg?s=612x612&w=0&k=20&c=yvFDnYMNEJ6WEDYrAaOOLXv-Jhtv6ViBRXSzJhL9S_k="
+              alt="Student studying online"
               className="w-full h-full object-cover"
             />
           </motion.div>
