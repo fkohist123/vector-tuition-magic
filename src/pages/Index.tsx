@@ -24,19 +24,19 @@ const Index = () => {
       description: "Learn from tutors with extensive experience and proven results."
     },
     {
-      icon: ArrowUpRight,
-      title: "Fostering Confidence",
-      description: "We develop ' self belief by nurturing talent and guiding past limitations."
-    },
-    {
       icon: Users,
       title: "1-on-1 Attention",
       description: "Get dedicated focus in personalized sessions to maximize your learning potential."
     },
     {
+      icon: ArrowUpRight,
+      title: "Fostering Confidence",
+      description: "We develop ' self belief by nurturing talent and guiding past limitations."
+    },
+    {
       icon: BookOpen,
       title: "Personalized Curriculum",
-      description: "Tailored learning plans designed specifically for your needs and learning style."
+      description: "Tailored learning plans designed specifically for your needs."
     }
   ];
 
