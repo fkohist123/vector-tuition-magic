@@ -1,12 +1,8 @@
-
 import { NavLink } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-white border-t">
+  return <footer className="bg-white border-t">
       <div className="content-container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -39,7 +35,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={16} />
-                <span>yousaf@vectortuition.com</span>
+                <span>Yousaf@Vectortuition.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone size={16} />
@@ -47,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={16} />
-                <span>192 Haymill Cl, Ealing, London</span>
+                <span>192 Haymill Close, London</span>
               </div>
             </div>
           </div>
@@ -67,8 +63,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
