@@ -80,7 +80,7 @@ const Index = () => {
       <Hero
         title="Expert tutoring to reach your full potential"
         subtitle={<>Personalized tuition and academic coaching for <span className="font-semibold">KS3</span>, <span className="font-semibold">GCSE</span> and <span className="font-semibold">A-Levels</span>. Book a session today and start your journey to academic success.</>}
-        videoSrc="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4"
+        imageSrc="https://media.istockphoto.com/id/1342036694/photo/african-american-college-girl-using-laptop-learning-online-outdoors.jpg?s=612x612&w=0&k=20&c=OFQca01H1ARHVS-zUzhEtzR6sGtYamqe-wfUFTy7Nm0="
       />
       
       <section className="content-section bg-gray-50">

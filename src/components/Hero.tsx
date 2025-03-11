@@ -14,6 +14,7 @@ interface HeroProps {
   ctaText?: string;
   ctaLink?: string;
   videoSrc?: string;
+  imageSrc?: string;
 }
 
 const Hero = ({
@@ -24,7 +25,8 @@ const Hero = ({
   showCta = true,
   ctaText = "Book a Session",
   ctaLink = "/schedule",
-  videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" // Default placeholder video
+  videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4", // Default placeholder video
+  imageSrc
 }: HeroProps) => {
   const navigate = useNavigate();
 
@@ -83,21 +85,29 @@ const Hero = ({
             {children}
           </motion.div>
           
-          {/* Right Column - Video */}
+          {/* Right Column - Media (Image or Video) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
           >
-            <video 
-              className="w-full h-full object-cover" 
-              autoPlay 
-              muted 
-              loop 
-              playsInline
-              src={videoSrc}
-            />
+            {imageSrc ? (
+              <img 
+                src={imageSrc} 
+                alt="Student learning" 
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video 
+                className="w-full h-full object-cover" 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                src={videoSrc}
+              />
+            )}
           </motion.div>
         </div>
       </div>
