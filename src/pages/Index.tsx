@@ -51,27 +51,32 @@ const Index = () => {
     {
       content: "The tuition lessons I had with Yousaf were a big help in achieving all 9s in my GCSEs. Especially for Maths and Sciences. I want to say a big thank you.",
       author: "Yaser S.",
-      relation: "A-level Student"
+      relation: "A-level Student",
+      bgColor: "bg-blue-100"
     },
     {
       content: "Before I took lessons with Yousaf, A-level Physics was a struggle. He explained concepts in a way that was easy to understand and gave me tools to remember how to answer questions.",
       author: "Adam H.",
-      relation: "A-level Student"
+      relation: "A-level Student",
+      bgColor: "bg-green-100"
     },
     {
       content: "Yousaf tutored my son James, from KS3 through to GCSE. We are thoroughly pleased with the quality of his teaching and credit him with our son getting into a top sixth form.",
       author: "Oliver M.",
-      relation: "Parent"
+      relation: "Parent",
+      bgColor: "bg-purple-100"
     },
     {
       content: "Yousaf taught A-level Physics to me in a way that made it so simple. I found the jump from GCSE very tough and just couldn't understand in class.",
       author: "Hannah.",
-      relation: "A-level Student"
+      relation: "A-level Student",
+      bgColor: "bg-pink-100"
     },
     {
       content: "I want to thank Mr Kohistani for helping me improve my grades in Maths and Science as well as helping me with my personal statement for my UCAS application.",
       author: "Shahram O.",
-      relation: "Student"
+      relation: "Student",
+      bgColor: "bg-yellow-100"
     }
   ];
 
@@ -212,8 +217,10 @@ const Index = () => {
                       </div>
                       <p className="text-lg italic mb-6 flex-grow">"{testimonial.content}"</p>
                       <div className="mt-auto">
-                        <p className="font-medium">{testimonial.author}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.relation}</p>
+                        <span className={`${testimonial.bgColor} px-3 py-1 rounded-full inline-block font-medium`}>
+                          {testimonial.author}
+                        </span>
+                        <p className="text-sm text-muted-foreground mt-1">{testimonial.relation}</p>
                       </div>
                     </CardContent>
                   </Card>
