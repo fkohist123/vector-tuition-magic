@@ -43,7 +43,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={16} />
-                <span>Stockdove Way, UB6 8TJ, London</span>
+                <span>Stockdove Way, London, UB6 8TJ
+              </span>
               </div>
             </div>
           </div>
