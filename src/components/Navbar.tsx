@@ -54,15 +54,6 @@ const Navbar = () => {
             >
               Pricing
             </NavLink>
-            <NavLink 
-              to="/schedule" 
-              className={({ isActive }) => 
-                cn("transition-colors hover:text-primary", 
-                isActive ? "text-primary font-medium" : "text-foreground")
-              }
-            >
-              Schedule
-            </NavLink>
             
             <Button asChild size="sm">
               <NavLink to="/schedule">
@@ -107,16 +98,6 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Pricing
-          </NavLink>
-          <NavLink 
-            to="/schedule" 
-            className={({ isActive }) => 
-              cn("py-2 transition-colors hover:text-primary", 
-              isActive ? "text-primary font-medium" : "text-foreground")
-            }
-            onClick={closeMenu}
-          >
-            Schedule
           </NavLink>
           
           <Button className="mt-4 w-full" onClick={closeMenu}>
