@@ -1,4 +1,3 @@
-
 import { NavLink } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 const Footer = () => {
@@ -44,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={16} />
-                <span>192 Haymill Close, London</span>
+                <span>Stockdove Way, UB6 8TJ, London</span>
               </div>
             </div>
           </div>
