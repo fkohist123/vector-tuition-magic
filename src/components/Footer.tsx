@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={16} />
-                <span>Yousaf@Vectortuition.com</span>
+                <span>Tutor@vectortuition.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone size={16} />
