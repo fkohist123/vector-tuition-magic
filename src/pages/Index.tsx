@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Clock, Award, Users, MessageCircle, ArrowUpRight } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -165,7 +164,7 @@ const Index = () => {
         <div className="section-title">
           <div className="inline-flex items-center px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4">
             <Sparkles size={14} className="mr-1" />
-            <span>Meet Your Tutor</span>
+            <span>Hello</span>
           </div>
           <h2>Meet Your Tutor</h2>
           <p>
