@@ -207,11 +207,11 @@ const Index = () => {
             }}
             className="w-full max-w-4xl mx-auto"
           >
-            <CarouselContent className="px-4 sm:px-0">
+            <CarouselContent className="px-1 sm:px-0">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/2 pl-0 sm:pl-4">
+                <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/2">
                   <div className="p-1">
-                    <Card className="h-full">
+                    <Card className="h-full mx-1 sm:mx-0">
                       <CardContent className="flex flex-col h-full p-4 sm:p-6">
                         <div className="text-blue-600 mb-4">
                           <MessageCircle size={24} />
