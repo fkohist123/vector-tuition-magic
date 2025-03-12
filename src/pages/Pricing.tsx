@@ -75,7 +75,7 @@ const Pricing = () => {
     },
     {
       title: "GCSE",
-      price: "£140",
+      price: "£70",
       frequency: "week (2 hours)",
       description: "Comprehensive support for GCSE exam preparation.",
       subjects: "Maths, English, Science",
@@ -90,7 +90,7 @@ const Pricing = () => {
     },
     {
       title: "A-level",
-      price: "£180",
+      price: "£100",
       frequency: "week (2 hours)",
       description: "Advanced tutoring for A-level students.",
       subjects: "Maths, Biology, Physics",
@@ -101,7 +101,7 @@ const Pricing = () => {
         { text: "Exam strategy guidance" },
       ],
       popular: false,
-      discount: "18%",
+      discount: "9%",
     },
   ];
 
