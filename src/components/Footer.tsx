@@ -1,3 +1,4 @@
+
 import { NavLink } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
               Vector Tuition
             </h3>
             <p className="text-muted-foreground">
-              Personalized education services that help students reach their full potential.
+              Personalized education services moving you upwards and beyond.
             </p>
           </div>
           
