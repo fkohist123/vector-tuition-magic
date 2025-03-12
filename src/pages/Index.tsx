@@ -243,7 +243,7 @@ const Index = () => {
             Book a discovery call to discuss how we can help you meet your academic.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" onClick={() => navigate('/schedule')}>
+            <Button size="lg" onClick={() => navigate('/discovery')}>
               Book a Call
             </Button>
             <Button variant="outline" size="lg" onClick={() => navigate('/pricing')}>

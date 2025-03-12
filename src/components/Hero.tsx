@@ -24,7 +24,7 @@ const Hero = ({
   children,
   showCta = true,
   ctaText = "Book a Call",
-  ctaLink = "/schedule",
+  ctaLink = "/discovery",
   videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4", // Default placeholder video
   imageSrc
 }: HeroProps) => {

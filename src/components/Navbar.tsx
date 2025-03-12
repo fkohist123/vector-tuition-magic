@@ -56,7 +56,7 @@ const Navbar = () => {
             </NavLink>
             
             <Button asChild size="sm">
-              <NavLink to="/schedule">
+              <NavLink to="/discovery">
                 Book a Call
               </NavLink>
             </Button>
@@ -100,8 +100,10 @@ const Navbar = () => {
             Pricing
           </NavLink>
           
-          <Button className="mt-4 w-full" onClick={closeMenu}>
-            Book a Call
+          <Button className="mt-4 w-full" onClick={() => { closeMenu(); }} asChild>
+            <NavLink to="/discovery">
+              Book a Call
+            </NavLink>
           </Button>
         </nav>
       </div>
