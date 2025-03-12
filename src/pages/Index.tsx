@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Clock, Award, Users, MessageCircle, ArrowUpRight } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -84,7 +85,7 @@ const Index = () => {
     <div className="page-transition min-h-screen flex flex-col">
       <Hero
         title="Expert tutoring to reach your full potential"
-        subtitle={<>Personalized tuition and academic coaching for <span className="font-semibold">KS3</span>, <span className="font-semibold">GCSE</span> and <span className="font-semibold">A-Levels</span>. Book a session today and start your journey to academic success.</>}
+        subtitle={<>Personalized tuition and academic coaching for <span className="font-semibold">KS3</span>, <span className="font-semibold">GCSE</span> and <span className="font-semibold">A-Levels</span>. Book a call today and start your journey to academic success.</>}
         imageSrc="https://media.istockphoto.com/id/1345678276/photo/teenage-boy-with-laptop-having-online-school-class-at-home.jpg?s=612x612&w=0&k=20&c=BA8210GPVx_NWI9HIxukFhQJUrt2rYTBjqxXYT3zx1Q="
       />
       
@@ -239,11 +240,11 @@ const Index = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6">Ready to reach your full potential?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Book a session today and begin your learning journey.
+            Book a call today and begin your learning journey.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" onClick={() => navigate('/schedule')}>
-              Book a Session
+              Book a Call
             </Button>
             <Button variant="outline" size="lg" onClick={() => navigate('/pricing')}>
               View Pricing

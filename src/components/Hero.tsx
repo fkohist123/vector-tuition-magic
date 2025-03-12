@@ -23,7 +23,7 @@ const Hero = ({
   className,
   children,
   showCta = true,
-  ctaText = "Book a Session",
+  ctaText = "Book a Call",
   ctaLink = "/schedule",
   videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4", // Default placeholder video
   imageSrc

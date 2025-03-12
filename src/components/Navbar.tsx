@@ -66,7 +66,7 @@ const Navbar = () => {
             
             <Button asChild size="sm">
               <NavLink to="/schedule">
-                Book a Session
+                Book a Call
               </NavLink>
             </Button>
           </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
           </NavLink>
           
           <Button className="mt-4 w-full" onClick={closeMenu}>
-            Book a Session
+            Book a Call
           </Button>
         </nav>
       </div>
