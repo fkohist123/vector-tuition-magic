@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Clock, Award, Users, MessageCircle, ArrowUpRight } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -107,8 +108,8 @@ const Index = () => {
             <p className="text-muted-foreground mb-8">
               We specialize in mathematics and sciences with a track record of helping students improve their grades significantly. Our teaching philosophy centers on building strong foundations, developing critical thinking skills, and fostering confidence.
             </p>
-            <Button onClick={() => navigate('/pricing')}>
-              View Packages
+            <Button onClick={() => navigate('/discovery')}>
+              Book a Call
             </Button>
           </motion.div>
           
