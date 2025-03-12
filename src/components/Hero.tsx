@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -25,18 +24,17 @@ const Hero = ({
   showCta = true,
   ctaText = "Book a Call",
   ctaLink = "/discovery",
-  videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4", // Default placeholder video
+  videoSrc = "https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4",
   imageSrc
 }: HeroProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className={cn("relative overflow-hidden py-24 md:py-32", className)}>
+    <div className={cn("relative overflow-hidden py-12 md:py-24", className)}>
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white opacity-50" />
       
       <div className="relative content-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -85,7 +83,6 @@ const Hero = ({
             {children}
           </motion.div>
           
-          {/* Right Column - Media (Image or Video) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
