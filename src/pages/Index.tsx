@@ -130,6 +130,10 @@ const Index = () => {
       
       <section className="content-section bg-white">
         <div className="section-title">
+          <div className="inline-flex items-center px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4">
+            <Sparkles size={14} className="mr-1" />
+            <span>Our Services</span>
+          </div>
           <h2>How We Can Help You Succeed</h2>
           <p>
             Our approach goes beyond just teaching the curriculum, taking an interest in the holistic development of each student.
@@ -158,6 +162,10 @@ const Index = () => {
       
       <section className="content-section bg-gray-50">
         <div className="section-title">
+          <div className="inline-flex items-center px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4">
+            <Sparkles size={14} className="mr-1" />
+            <span>Meet Your Tutor</span>
+          </div>
           <h2>Meet Your Tutor</h2>
           <p>
             A dedicated educator passionate about helping students achieve their academic goals.
@@ -193,6 +201,10 @@ const Index = () => {
       
       <section className="content-section bg-white">
         <div className="section-title">
+          <div className="inline-flex items-center px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4">
+            <Sparkles size={14} className="mr-1" />
+            <span>Testimonials</span>
+          </div>
           <h2>What Our Clients Say</h2>
           <p>
             Hear from students who have transformed their academic performance with our tutoring services.
