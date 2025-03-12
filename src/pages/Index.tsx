@@ -240,7 +240,7 @@ const Index = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6">Ready to reach your full potential?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Book a discovery call to discuss how we can help you meet your academic.
+            Book a discovery call to discuss how we can help you meet your academic goals.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" onClick={() => navigate('/discovery')}>
