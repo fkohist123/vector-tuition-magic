@@ -239,7 +239,7 @@ const Index = () => {
       
       <section className="content-section">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="mb-6">Ready to reach your full potential?</h2>
+          <h2 className="mb-6">Begin your journey to fulfill your potential</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Book a discovery call to discuss how we can help you meet your academic goals.
           </p>
