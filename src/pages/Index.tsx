@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Clock, Award, Users, MessageCircle, ArrowUpRight } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -208,23 +207,25 @@ const Index = () => {
             }}
             className="w-full max-w-4xl mx-auto"
           >
-            <CarouselContent>
+            <CarouselContent className="px-4 sm:px-0">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col h-full p-6">
-                      <div className="text-blue-600 mb-4">
-                        <MessageCircle size={24} />
-                      </div>
-                      <p className="text-lg italic mb-6 flex-grow">"{testimonial.content}"</p>
-                      <div className="mt-auto">
-                        <span className={`${testimonial.bgColor} px-3 py-1 rounded-full inline-block font-medium`}>
-                          {testimonial.author}
-                        </span>
-                        <p className="text-sm text-muted-foreground mt-1">{testimonial.relation}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/2 pl-0 sm:pl-4">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col h-full p-4 sm:p-6">
+                        <div className="text-blue-600 mb-4">
+                          <MessageCircle size={24} />
+                        </div>
+                        <p className="text-base sm:text-lg italic mb-6 flex-grow">"{testimonial.content}"</p>
+                        <div className="mt-auto">
+                          <span className={`${testimonial.bgColor} px-3 py-1 rounded-full inline-block font-medium text-sm sm:text-base`}>
+                            {testimonial.author}
+                          </span>
+                          <p className="text-xs sm:text-sm text-muted-foreground mt-1">{testimonial.relation}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
