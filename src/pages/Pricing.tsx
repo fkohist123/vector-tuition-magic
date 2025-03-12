@@ -113,7 +113,7 @@ const Pricing = () => {
         <div className="section-title">
           <h2>Online Tuition Pricing</h2>
           <p>
-            First lessons for new students are discount 50%. For our packages, we ask students to commit to at least 8 hours a month with payment in advance.
+            First lessons for new students are discount 50%. For our packages, we ask students to commit to at least 8 hours a month.
           </p>
         </div>
         
@@ -210,3 +210,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
