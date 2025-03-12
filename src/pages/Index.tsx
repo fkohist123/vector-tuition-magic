@@ -243,7 +243,7 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Book a discovery call to discuss how we can help you meet your academic goals.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <Button size="lg" onClick={() => navigate('/discovery')}>
               Book a Call
             </Button>
