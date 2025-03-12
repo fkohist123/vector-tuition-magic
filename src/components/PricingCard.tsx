@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Check, Percent } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface PricingFeature {
   text: string;
@@ -19,6 +20,7 @@ interface PricingCardProps {
   buttonText?: string;
   delay?: number;
   discount?: string | null;
+  buttonLink?: string;
 }
 
 const PricingCard = ({
@@ -32,6 +34,7 @@ const PricingCard = ({
   buttonText = "Get Started",
   delay = 0,
   discount = null,
+  buttonLink = "/schedule",
 }: PricingCardProps) => {
   return (
     <motion.div
@@ -74,8 +77,10 @@ const PricingCard = ({
       </ul>
       
       <div className="mt-8">
-        <Button className="w-full">
-          {buttonText}
+        <Button className="w-full" asChild>
+          <Link to={buttonLink}>
+            {buttonText}
+          </Link>
         </Button>
       </div>
     </motion.div>
