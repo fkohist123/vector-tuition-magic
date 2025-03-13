@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Clock, Award, Users, MessageCircle, ArrowUpRight } from 'lucide-react';
 import Hero from '@/components/Hero';
@@ -83,7 +84,7 @@ const Index = () => {
   return (
     <div className="page-transition min-h-screen flex flex-col">
       <Hero
-        title="Expert tutoring to reach your full potential"
+        title="Expert Tuition moving you upwards and beyond"
         subtitle={<>Personalized tuition and academic coaching for <span className="font-semibold">KS3</span>, <span className="font-semibold">GCSE</span> and <span className="font-semibold">A-Levels</span>. Book a call today and start your journey to academic success.</>}
         imageSrc="https://media.istockphoto.com/id/1345678276/photo/teenage-boy-with-laptop-having-online-school-class-at-home.jpg?s=612x612&w=0&k=20&c=BA8210GPVx_NWI9HIxukFhQJUrt2rYTBjqxXYT3zx1Q="
       />
