@@ -1,10 +1,9 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ArrowUpRight, Download } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,23 +55,6 @@ const Navbar = () => {
               Pricing
             </NavLink>
             
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="/vector-logo.svg" 
-                    download="vector-tuition-logo.svg"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Download size={20} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Download Logo</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            
             <Button asChild size="sm">
               <NavLink to="/discovery">
                 Book a Call
@@ -117,16 +99,6 @@ const Navbar = () => {
           >
             Pricing
           </NavLink>
-          
-          <a 
-            href="/vector-logo.svg" 
-            download="vector-tuition-logo.svg"
-            className="py-2 transition-colors hover:text-primary flex items-center gap-2"
-            onClick={closeMenu}
-          >
-            <Download size={20} />
-            Download Logo
-          </a>
           
           <Button className="mt-4 w-full" onClick={() => { closeMenu(); }} asChild>
             <NavLink to="/discovery">
