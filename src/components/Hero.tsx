@@ -57,7 +57,7 @@ const Hero = ({
               transition={{ delay: 0.3, duration: 0.6 }}
               className="font-semibold tracking-tight"
             >
-              {title}
+              {title}.
             </motion.h1>
             
             <motion.p
