@@ -28,7 +28,7 @@ const Footer = () => {
                 Pricing
               </NavLink>
               <NavLink to="/schedule" className="text-muted-foreground hover:text-primary transition-colors">
-                Schedule
+                Book a Call
               </NavLink>
             </nav>
           </div>
