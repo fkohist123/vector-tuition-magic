@@ -85,7 +85,7 @@ const Index = () => {
     <div className="page-transition min-h-screen flex flex-col">
       <Hero
         title="Expert tuition moving you upwards & beyond"
-        subtitle={<>Personalized tuition and academic coaching for <span className="font-semibold">KS3</span>, <span className="font-semibold">GCSE</span> and <span className="font-semibold">A-Levels</span>. Book a call today and start your journey to academic success.</>}
+        subtitle={<>Personalized tuition and academic coaching for <span className="text-[#33C3F0] font-semibold">KS3</span>, <span className="text-[#33C3F0] font-semibold">GCSE</span> and <span className="text-[#33C3F0] font-semibold">A-Levels</span>. Book a call today and start your journey to academic success.</>}
         imageSrc="https://media.istockphoto.com/id/1345678276/photo/teenage-boy-with-laptop-having-online-school-class-at-home.jpg?s=612x612&w=0&k=20&c=BA8210GPVx_NWI9HIxukFhQJUrt2rYTBjqxXYT3zx1Q="
       />
       
