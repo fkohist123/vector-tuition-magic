@@ -91,17 +91,11 @@ const Hero = ({
             className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
           >
             {imageSrc ? (
-              <div className="relative w-full h-full">
-                <img 
-                  src={imageSrc} 
-                  alt="Student learning" 
-                  className="w-full h-full object-cover"
-                />
-                {/* Glossy light effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30 pointer-events-none" />
-                <div className="absolute -top-1/2 -right-1/4 w-1/2 h-full rounded-full bg-blue-200 opacity-20 blur-3xl transform rotate-12 pointer-events-none" />
-                <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 rounded-full bg-blue-100 opacity-20 blur-2xl pointer-events-none" />
-              </div>
+              <img 
+                src={imageSrc} 
+                alt="Student learning" 
+                className="w-full h-full object-cover"
+              />
             ) : (
               <video 
                 className="w-full h-full object-cover" 
