@@ -5,8 +5,10 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
+
 const Pricing = () => {
   const [pricingType, setPricingType] = useState<'hourly' | 'package'>('hourly');
+  
   const hourlyPricingPlans = [{
     title: "KS3",
     price: "£30",
@@ -59,6 +61,7 @@ const Pricing = () => {
     popular: false,
     discount: null
   }];
+  
   const packagePricingPlans = [{
     title: "KS3",
     price: "£50",
@@ -75,7 +78,7 @@ const Pricing = () => {
       text: "Weekly progress reports"
     }],
     popular: false,
-    discount: "58%"
+    discount: "17%"
   }, {
     title: "GCSE",
     price: "£70",
@@ -111,7 +114,9 @@ const Pricing = () => {
     popular: false,
     discount: "9%"
   }];
+  
   const pricingPlans = pricingType === 'hourly' ? hourlyPricingPlans : packagePricingPlans;
+  
   return <div className="page-transition min-h-screen flex flex-col">
       <section className="content-section bg-gray-50 pt-24">
         <div className="section-title">
@@ -216,4 +221,5 @@ const Pricing = () => {
       <Footer />
     </div>;
 };
+
 export default Pricing;
