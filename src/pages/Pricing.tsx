@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import PricingCard from '@/components/PricingCard';
@@ -95,7 +96,7 @@ const Pricing = () => {
       text: "Subject-specific help"
     }],
     popular: false,
-    discount: "12.5%"
+    discount: "13%"
   }, {
     title: "A-level",
     price: "£100",
